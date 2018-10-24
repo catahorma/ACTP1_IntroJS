@@ -6,6 +6,7 @@
   Seleccionar el elemento con clase counter e incrementar en 10 su valor
   Al hacerle click al elemento con id row-3 se debe agregar el color de fondo gris y además debe tener una transición de 1 segundo
   Seleccionar el h1 dentro de la sección y duplicar su font-size
+
   Seleccionar el último row dentro de la tabla (sin utilizar el id, puesto que el número de elementos podría cambiar) y agregar color de fondo rojo
 -->
 
@@ -14,8 +15,36 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
   </head>
   <body>
+    <script>
+    $(function(){
+    $("h1").css("color", "red");
+    $(".section-1").css("background-color", "yellow")
+
+    var counter = $(".counter").text();
+    counter = parseInt(counter); // se convierte en numero
+    console.log(counter + 10); // en la consola se suma 10
+    counter = counter + 10; // en el texto se suma 10
+    $(".counter").text(counter); // en el texto se suma 10
+
+    $("#row-3").on("click", function() { //que al darle al row3 pase algo
+      $(this).css("background-color", "gray") //se convierta fondo gris
+      $(this).hide(slow); //que se muestre con velocidad 
+    });
+
+    $("section h1").css("font-size", "2em"); // aumentar tamaño tipografía modo CSS
+    //$("section h1").children("h1").css("font-size", "2em"; // aumentar tamaño tipografía modo jQuery
+
+    $("table tr:last-child").css("background-color", "red"); // CSS
+    //$("table tr").last().css("background-color", "red") // jQuery
+
+      });
+
+    </script>
+
     <h1> Hey !! </h1>
     <section class="section-1">
       <h1> Hey </h1>

@@ -27,6 +27,17 @@ Para la solución puedes inspirarte en: https://codepen.io/gabrieleromanato/pen/
     <title></title>
   </head>
   <body>
+  	<img class="no-context" src="Gatito-nuevo-1.png" alt="">
+  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur suscipit officiis facere quia laudantium aut perferendis quod nihil eaque, delectus sed magni ipsam at natus, veritatis excepturi labore quaerat odio.
+    </p>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+    <script>
+    $(".no-context").on("contextmenu", function(event) { // que a la clase .no-context tenga contextmenu , The contextmenu event is sent to an element when the right button of the mouse is clicked on it, but before the context menu is displayed
+    	event.preventDefault(); // preiene la accion
+    })
+    </script>
 
   </body>
 </html>
